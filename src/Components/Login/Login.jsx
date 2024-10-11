@@ -20,11 +20,7 @@ const App = () => {
     const login = (username, password) => {
         if (username === 'admin' && password === 'admin123') {
             alert('Successfully Logged In');
-
-            // Clear form fields after successful login
             form.resetFields(); 
-
-            // Navigate to another page
             navigate('/'); // Change this to the route you want
         } else {
             alert('Username or password is incorrect');
