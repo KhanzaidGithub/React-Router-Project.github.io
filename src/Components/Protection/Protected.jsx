@@ -1,25 +1,23 @@
 import React from 'react'
-import {useLocation, Navigate} from 'react-router-dom'
+import { useLocation, Navigate } from 'react-router-dom'
 
 
-const Protected = ({Children}) => {
+const Protected = ({ children }) => {
+    // const { authed } = useAuth();
 
-    const checkauth =()=>{
+    const checkauth = () => {
         const isAuth = localStorage.getItem('isAuth');
         return isAuth
     }
 
     const location = useLocation();
-    const isAuthres = checkauth();
-    return(
-        isAuthres ? (
-            Children
-        ):(
-            <Navigate to='/' replace state={{path:location.pathname}}/>
-        )
-    )    
+    const isAuthreq = checkauth()
 
-
+    return isAuthreq === "true" ? (
+        children
+    ) : (
+        <Navigate to='/' replace state={{ path: location.pathname }} />
+    )
 
 }
 

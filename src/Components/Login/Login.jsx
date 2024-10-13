@@ -18,10 +18,11 @@ const App = () => {
 
     // Custom login function
     const login = (username, password) => {
-        if (username === 'admin' && password === 'admin123') {
-            alert('Successfully Logged In');
-            form.resetFields(); 
-            navigate('/'); // Change this to the route you want
+        if (username === 'admin' && password === 'admin') {
+            // alert('Successfully Logged In');
+            // form.resetFields(); 
+            localStorage.setItem('isAuth', "true")
+            navigate('/home');
         } else {
             alert('Username or password is incorrect');
         }
