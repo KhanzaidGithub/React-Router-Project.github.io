@@ -7,6 +7,7 @@ import Contact from '../Contact/Contact'
 import User from '../User/User'
 import Github from '../Github/Github'
 import Login from '../Login/Login'
+import TodoRedux from '../Redux-TodoPage/index'
 import PageNotFound from '../PageNotFound/PageNotFound'
 import Protected from '../Protection/Protected'
 import Header from '../Header/Header'
@@ -34,6 +35,7 @@ const Routing = () => {
             <Routes>
                 <Route path='/home' element={<Protected><Home /></Protected>} />
                 <Route path='about' element={<Protected><About /></Protected>} />
+                <Route path='todo' element={<Protected><TodoRedux /></Protected>} />
                 <Route path='contact' element={<Protected><Contact /></Protected>} />
                 <Route path='user/:userid' element={<Protected><User /></Protected>} />
                 <Route path='github' element={<Protected><Github /></Protected>} />

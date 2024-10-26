@@ -23,9 +23,8 @@ export const todoSlice = createSlice({
         },
         //Current State action data is passing through
         removetodo: (state, action) => {
-            state.todos = state.todos.filter((todo) => {
-                todo.id !== action.payload
-            })
+            state.todos = state.todos.filter((todo) => { 
+            return todo.id !== action.payload })
         },
     }
 })

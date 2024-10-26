@@ -1,0 +1,50 @@
+.form {
+    /* border: 1px solid black; */
+    width: 500px;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+}
+
+.form input {
+    width: 60%;
+    padding: 10px 10px;
+    border-radius: 4px;
+    border: 2px solid black;
+    outline: none;
+    font-size: 18px;
+}
+
+.form button {
+    background-color: #b64b16;
+    padding: 10px 20px;
+    color: white;
+    border-radius: 6px;
+    font-size: 18px;
+}
+
+.ShowTodo {
+    /* border: 1px solid red; */
+    width: 500px;
+    margin: auto;
+    padding: 20px 10px;
+    font-size: 18px;
+    /* margin-top: 2 0px; */
+}
+
+.ShowTodo h2 {
+    font-size: 24px;
+    text-align: center;
+    font-weight: 600;
+}
+
+.ShowTodo button {
+    margin-left: 20px;
+    background-color: red;
+    border-radius: 6px;
+    padding: 10px 15px;
+    font-size: 18px;
+    font-weight: 600;
+    color: white;
+    cursor: pointer;
+}

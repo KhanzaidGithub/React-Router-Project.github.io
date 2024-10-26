@@ -7,10 +7,13 @@ import {
   createBrowserRouter,
   RouterProvider,
   createRoutesFromElements,
-  Routes, 
-  Route, 
+  Routes,
+  Route,
   BrowserRouter
 } from 'react-router-dom'
+import { Provider } from 'react-redux'
+import { store } from './Components/React-Redux/Store'
+
 
 // import Layout from './Layout'
 // import Home from './Components/Home/Home'
@@ -76,6 +79,8 @@ import {
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <BrowserRouter>
-    <App />
+    <Provider store={store}>
+      <App />
+    </Provider>
   </BrowserRouter>
 );

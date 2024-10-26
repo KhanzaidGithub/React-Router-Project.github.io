@@ -29,7 +29,7 @@ const App = () => {
     };
 
     return (
-        <div className="form">
+        <div className="LoginForm">
             <Form
                 form={form} // Attach the form instance to enable resetting
                 name="basic"
